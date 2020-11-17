@@ -10,10 +10,12 @@ class Controller extends Component {
   constructor()
   {
     super();
-    this.baseUrl = "http://18.212.74.66:8080/api/v1/";
+    this.baseUrl = "http://ec2-3-139-89-65.us-east-2.compute.amazonaws.com/api/v1/";
   }
+
   render(){
-    return(
+   
+    return (
       <Router>
          <div className="main-container">
      	      <Route exact path='/' render={(props) => <Home {...props} baseUrl = {this.baseUrl}/> }  />
@@ -23,7 +25,7 @@ class Controller extends Component {
         </div>
       </Router>
 
-    )
+    );
   }
 }
 
