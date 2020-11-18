@@ -140,7 +140,7 @@ class Details extends Component {
                             <StarBorderIcon className={star.color} key={"star" + star.id} onClick={() => this.starClickHandler(star.id)} />
                         ))}
                         <div className="bold marginBottom16 marginTop16"><Typography><span className="bold">Artists:</span></Typography></div>
-                        {movie.artists.length > 0 &&
+                        {movie.artists != null &&
                         <GridList cellHeight={160} cols={2}>
                             {movie.artists.map(artist => (
                                 <GridListTile className="gridTile" onClick={() => this.artistClickHandler(artist.wiki_url)} key={artist.id}>
